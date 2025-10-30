@@ -22,6 +22,8 @@ export async function getRecipeFromMistral(ingredientsArr) {
         return response.generated_text
     } catch (err) {
         console.error(err.message)
-        return "generated recipe (free chỉ thế thôi)"
+        return (
+            "generated recipe (free chỉ thế thôi), but there was an error fetching it from the API. Please try again later."
+        )
     }
 }
